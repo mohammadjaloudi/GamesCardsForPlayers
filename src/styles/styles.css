@@ -1,0 +1,91 @@
+body {
+  background-color: black;
+  color: #dfdbdb;
+}
+
+.Des {
+  cursor: auto;
+  font-size: 11px;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+
+.arrow.left {
+  cursor: pointer;
+  margin-left: 12%;
+  margin-top: -90px;
+}
+
+.arrow.right {
+  cursor: pointer;
+  margin-top: -500px;
+  margin-left: 54%;
+}
+
+.TitleOfThePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1200px;
+  text-shadow: 0 0 5px rgba(223, 219, 219, 0.5),
+    0 0 10px rgba(223, 219, 219, 0.4), 0 0 15px rgba(223, 219, 219, 0.4),
+    0 0 20px rgba(223, 219, 219, 0.3), 0 0 25px rgba(223, 219, 219, 0.3);
+}
+
+.TitleOfThePage:hover {
+  cursor: pointer;
+  text-shadow: 0 0 10px rgba(223, 219, 219, 0.5),
+    0 0 20px rgba(223, 219, 219, 0.5), 0 0 30px rgba(223, 219, 219, 0.5),
+    0 0 40px rgba(223, 219, 219, 0.5), 0 0 50px rgba(223, 219, 219, 0.5);
+}
+
+.games-container {
+  margin-left: 42%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.game-card {
+  position: absolute;
+  cursor: pointer;
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  transition: top 0.3s, left 0.3s;
+}
+
+.game-card:nth-child(odd) {
+  top: calc((5% + 10%) * (0.5n - 1));
+  left: calc(5% + 5%);
+  z-index: 1;
+}
+
+.game-card:nth-child(even) {
+  top: calc((5% + 10%) * (0.5n - 1));
+  left: calc(-5% + -5%);
+  z-index: 1;
+}
+
+.game-card.selected {
+  width: 225px;
+  height: 325px;
+  object-fit: cover;
+  left: -12.5px;
+  top: -12.5px;
+  z-index: 2;
+}
+
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 103px 10px rgba(7, 175, 222, 0.5);
+  -moz-box-shadow: 0px 0px 103px 10px rgba(7, 175, 222, 0.5);
+  box-shadow: 0px 0px 103px 10px rgba(7, 175, 222, 0.5);
+}
+
+.game-card.selected .card-details {
+  display: block;
+}
