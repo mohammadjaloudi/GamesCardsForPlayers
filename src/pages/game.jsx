@@ -1,6 +1,6 @@
 import React from "react";
 
-export const games = [
+const games = [
   {
     title: "Ultrakill",
     link: "https://store.steampowered.com/app/1229490/ULTRAKILL/",
@@ -58,3 +58,5 @@ export const games = [
     image: "/assets/league-of-legends.jpg",
   },
 ];
+
+export default games;
