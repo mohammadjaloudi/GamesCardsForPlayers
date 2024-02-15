@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GameCard from "../components/GameCard";
-import { games } from "./game";
+import games from "./game";
 
 const Index = () => {
   const [slideIndex, setSlideIndex] = useState(0);
